@@ -1,7 +1,7 @@
 {
   "name": "air-friends",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && mv ./index.js ./dist/"
   },
   "version": "1.0.0",
   "main": "index.js",
