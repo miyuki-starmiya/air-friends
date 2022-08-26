@@ -1,12 +1,13 @@
 {
   "name": "air-friends",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "repository": "https://github.com/StarmiyaMiyuki/air-friends.git",
   "author": "KamiHitoe <sousaku_0912@yahoo.co.jp>",
   "license": "MIT",
   "dependencies": {
     "@line/bot-sdk": "^7.5.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1"
   }
 }
