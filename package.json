@@ -1,7 +1,7 @@
 {
   "name": "air-friends",
   "scripts": {
-    "build": "tsc && mv ./index.js ./dist/",
+    "build": "yarn install && tsc && mv ./index.js ./dist/",
     "start": "node ./dist/index.js"
   },
   "version": "1.0.0",
