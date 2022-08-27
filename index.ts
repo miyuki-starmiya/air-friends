@@ -87,7 +87,7 @@ app.post(
     );
 
     // Return a successfull message.
-    console.log('results: ', results);
+    console.log('success');
     return res.status(200).json({
       status: 'success',
       results,
