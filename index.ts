@@ -2,6 +2,7 @@
 import { ClientConfig, Client, middleware, MiddlewareConfig, WebhookEvent, TextMessage, MessageAPIResponseBase } from '@line/bot-sdk';
 import { Application, Request, Response } from 'express';
 import 'dotenv/config';
+import { messages } from './message';
 const express = require('express');
 
 // Setup all LINE client and Express configurations.
@@ -33,11 +34,12 @@ const textEventHandler = async (event: WebhookEvent): Promise<MessageAPIResponse
   // Process all message related variables here.
   const { replyToken } = event;
   const { text } = event.message;
+  const message = messages[Math.floor(Math.random() * messages.length)]
 
   // Create a new message.
   const response: TextMessage = {
     type: 'text',
-    text: `${text}って言った？`,
+    text: message,
   };
 
   // Reply to the user.
