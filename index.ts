@@ -48,6 +48,8 @@ const textEventHandler = async (event: WebhookEvent): Promise<MessageAPIResponse
     model: model,
     prompt: prompt,
   })
+  console.log(AIResponse)
+  console.log(Object.keys(AIResponse))
   const text: string = AIResponse.data.choices[0].text
 
   // Create a new message.
