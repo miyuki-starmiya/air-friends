@@ -41,7 +41,6 @@ const textEventHandler = async (event: WebhookEvent): Promise<MessageAPIResponse
   // Process all message related variables here.
   const { replyToken } = event
   const prompt = event.message.text
-  // const message = messages[Math.floor(Math.random() * messages.length)]
   const model = 'davinci:ft-personal-2023-02-26-05-07-41'
 
   // generate response created by OpenAI's model
@@ -49,13 +48,7 @@ const textEventHandler = async (event: WebhookEvent): Promise<MessageAPIResponse
     model: model,
     prompt: prompt,
   })
-  // const AIResponse = {
-  //   choices: [{
-  //     text: "test text"
-  //   }]
-  // }
-  // const text: string = AIResponse.choices[0].text
-  const text: string = AIResponse['choices'][0]['text']
+  const text: string = AIResponse.data.choices[0].text
 
   // Create a new message.
   const response: TextMessage = {
